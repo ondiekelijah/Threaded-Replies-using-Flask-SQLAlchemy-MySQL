@@ -1,4 +1,4 @@
-# Threaded-Nested-Replies-using-Flask-SQLAlchemy
+# Threaded-Nested-Replies-using-Flask-SQLAlchemy & MySQL
 
 Threaded comments using Common Table Expressions (CTE) for a MySQL Flask blog or CMS
 
