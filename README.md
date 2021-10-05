@@ -7,9 +7,7 @@ Credits to [peterspython](https://www.peterspython.com/en/blog/threaded-comments
 Set up & Installation.
 
 ### 1 .Clone/Fork the git repo and create an environment 
-          
-Depending on your operating system,make a virtual environment to avoid messing with your machine's primary dependencies
-          
+                    
 **Windows**
           
 ```bash
@@ -48,8 +46,8 @@ Applies for windows/macOS/Linux
 ### 4 .Migrate/Create a database
 
 Applies for windows/macOS/Linux
-**NB** First create a MySQL database then execute then
-Create a .env file and paste the following lines of code;
+**NB** First create a MySQL database then execute then <br>
+create a .env file and paste the following lines of code;
 ```
 SECRET_KEY = 'secret-key'
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://mysql-username:mysql-db-pass@localhost/db-name"
