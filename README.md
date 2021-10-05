@@ -1,6 +1,4 @@
-# Threaded-Nested-Replies-using-Flask-SQLAlchemy & MySQL
-
-Threaded comments using Common Table Expressions (CTE) for a MySQL Flask blog or CMS
+# Threaded comments using Common Table Expressions (CTE) for a MySQL Flask blog or CMS
 
 Credits to [peterspython](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
 
@@ -45,7 +43,7 @@ Applies for windows/macOS/Linux
 ```pip install -r requirements.txt```
 ### 4 .Migrate/Create a database
 
-Applies for windows/macOS/Linux
+Applies for windows/macOS/Linux <br>
 **NB** First create a MySQL database then execute then <br>
 create a .env file and paste the following lines of code;
 ```
