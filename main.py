@@ -120,51 +120,5 @@ def reply_comment(post_id,comment_id):
         )
 
 
-
-
-# @app.route(
-#     "/<int:post_id>",
-#     methods=("GET", "POST"),
-#     strict_slashes=False,
-# )
-# def article(post_id):
-#     form = commentForm()
-#     post = Post.query.filter_by(id=post_id).first()
-#     comments = Comment.query.order_by(Comment.id).all()
-
-#     if request.method == 'POST' and form.validate_on_submit():
-#         comment =form.comment.data
-#         author = form.author.data
-
-#         c1 = Comment(text=comment, author=author,post_id=post.id)
-#         c1.save()
-#         flash("Comment posted ", "success")
-
-#     return render_template("article.html",comments=comments,post=post,form=form,title="Article")
-
-
-# @app.route(
-#     "/<int:comment_id>/",
-#     methods=("GET", "POST"),
-#     strict_slashes=False,
-# )
-# def reply(comment_id):
-#     form = commentForm()
-#     comment = Comment.query.filter_by(id=comment_id).first()
-
-#     # for i in post_id:
-#     #     post_id =i
-
-#     if request.method=='POST':
-#         comment =form.comment.data
-#         author = form.author.data
-
-#         c1 = Comment(text=comment, author=author,parent=comment)
-#         c1.save()
-#         flash("Reply posted ", "success")
-
-#     return redirect(url_for('index'))
-
-
 if __name__ == "__main__":
     app.run(debug=True)
