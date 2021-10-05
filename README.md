@@ -71,7 +71,7 @@ Then start the application by executing the run file
 set FLASK_APP=main
 flask run
 ```
-During your experiment, you can manage your posts and comments from the Flask Admin panel. **localhost:500/admin**
+#### During your experiment, you can manage your posts and comments from the Flask Admin panel. **http://localhost:5000/admin/**
 
 </br>
 <div align="center"><h1>Follow me on Twitter</h1></div>
