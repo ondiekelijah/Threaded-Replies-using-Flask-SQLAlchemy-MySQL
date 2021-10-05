@@ -71,6 +71,8 @@ Then start the application by executing the run file
 set FLASK_APP=main
 flask run
 ```
+During your experiment, you can manage your posts and comments from the Flask Admin panel. **localhost:500/admin**
+
 </br>
 <div align="center"><h1>Follow me on Twitter</h1></div>
 <p align="center"> <a href="https://twitter.com/dev_elie" target="blank"><img src="https://img.shields.io/twitter/follow/dev_elie?logo=twitter&style=for-the-badge" alt="dev_elie" /></a> </p>
