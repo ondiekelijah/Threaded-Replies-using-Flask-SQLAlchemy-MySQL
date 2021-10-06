@@ -2,6 +2,8 @@
 
 Credits to [peterspython](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
 
+Also read more about the implementation [here](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
+
 Set up & Installation.
 
 ### 1 .Clone/Fork the git repo and create an environment 
