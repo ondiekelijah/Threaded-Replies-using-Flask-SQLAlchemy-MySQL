@@ -1,8 +1,8 @@
 # Threaded comments using Common Table Expressions (CTE) for a MySQL Flask blog or CMS
 
-Credits to [peterspython](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
+Credits to [miguelgrinberg](https://blog.miguelgrinberg.com/post/implementing-user-comments-with-sqlalchemy) & [peterspython](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
 
-Also read more about the implementation [here](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
+Also read more about the implementation [here](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms) or [here](https://blog.miguelgrinberg.com/post/implementing-user-comments-with-sqlalchemy)
 
 Set up & Installation.
 
