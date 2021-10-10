@@ -2,6 +2,8 @@
 
 Credits to [peterspython](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
 
+Also read more about the implementation [here](https://www.peterspython.com/en/blog/threaded-comments-using-common-table-expressions-cte-for-a-mysql-flask-blog-or-cms)
+
 Set up & Installation.
 
 ### 1 .Clone/Fork the git repo and create an environment 
@@ -72,6 +74,8 @@ set FLASK_APP=main
 flask run
 ```
 #### During your experiment, you can manage your posts and comments from the Flask Admin panel. **http://localhost:5000/admin/**
+
+![sample query result](https://github.com/Dev-Elie/Threaded-Replies-using-Flask-SQLAlchemy-MySQL/blob/main/static/img/mysql-query-result.png)
 
 </br>
 <div align="center"><h1>Follow me on Twitter</h1></div>
