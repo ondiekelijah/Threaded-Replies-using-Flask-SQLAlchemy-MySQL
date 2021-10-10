@@ -13,6 +13,7 @@ from wtforms import validators
 class CommentForm(FlaskForm):
     author = StringField(validators = [InputRequired()])
     comment = TextAreaField(validators = [InputRequired()])
+    
 class ReplyForm(FlaskForm):
     author = StringField(validators = [InputRequired()])
     reply = TextAreaField(validators = [InputRequired()])

@@ -19,27 +19,45 @@
     </div>
     <div class="shadow-sm p-4 col-lg-12 col-sm-6">
         {% for comment in comments %}
-        <div>
-            <p>{{comment.author}}</p>
-            <p>{{comment.text}}</p>
-            <a class="btn btn-primary btn-sm" data-bs-toggle="collapse" href="#comment-{{comment.id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Reply
-            </a>
-        </div>
-        <div class="collapse" id="comment-{{comment.id}}">
-            <form action="{{url_for('reply_comment',post_id=post.id,comment_id=comment.id) }}" method="POST">
-                {{ form2.csrf_token }}
-                <div class="form-group mt-2">
-                    {{form2.author(class="form-control", placeholder="Author")}}
+        <div class="row">
+            <!-- Begin comment indentation -->
+            {% if comment.level() == 0 %}
+            <div class="col-12 border-start border-primary">
+                {% elif comment.level() == 1 %}
+                <div class="col-11 offset-1 border-start border-secondary">
+                    {% elif comment.level() == 2 %}
+                    <div class="col-10 offset-2 border-start border-success">
+                        {% elif comment.level() == 3 %}
+                        <div class="col-9 offset-3 border-start border-info">
+                            {% elif comment.level() == 4 %}
+                            <div class="col-8 offset-4 border-start border-primary">
+                                {% else %}
+                                <div class="col-7 offset-5 border-start border-primary">
+                                    {% endif %}
+                                    <!-- End comment indentation -->
+                                    <div>
+                                        <p class="m-0">{{comment.author}}</p>
+                                        <p class="m-0">{{comment.text}}</p>
+                                        <a class="" data-bs-toggle="collapse" href="#comment-{{comment.id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <i class="bi bi-reply"></i>
+                                        </a>
+                                    </div>
+                                    <div class="collapse w-50" id="comment-{{comment.id}}">
+                                        <form action="{{url_for('reply_comment',post_id=post.id,comment_id=comment.id) }}" method="POST">
+                                            {{ form2.csrf_token }}
+                                            <div class="form-group mt-2">
+                                                {{form2.author(class="form-control", placeholder="Name")}}
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                {{form2.reply(class="form-control" ,placeholder="Response")}}
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mt-2 btn-sm">Post Reply</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group mt-2">
-                    {{form2.reply(class="form-control" ,placeholder="Reply")}}
-                </div>
-                <button type="submit" class="btn btn-primary mt-2 btn-sm">Post Reply</button>
-            </form>
-        </div>
-    {% endfor %}
-</div>
-</div>
-</div>
-{% endblock%}
+                {% endblock%}

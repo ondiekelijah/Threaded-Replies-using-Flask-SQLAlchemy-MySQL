@@ -46,7 +46,7 @@ def article(post_id):
     form2 = ReplyForm()
     
     post = Post.query.filter_by(id=post_id).first_or_404()
-    comments = Comment.query.order_by(Comment.id).all()
+    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.path.asc())
 
     if request.method == 'POST' and form.validate_on_submit():
 
@@ -56,16 +56,10 @@ def article(post_id):
         comment = Comment(
             text = text,
             author = author, 
-            content_item_id = post.id,
+            post_id = post.id,
         )
 
-        db.session.add(comment)
-        db.session.commit()
-        # we got the id, now set zpstring_id
-        comment.zpstring_id = str(comment.id).zfill(8)
-        # set thread timestamp
-        comment.thread_created_on = comment.created_on
-        db.session.commit()
+        comment.save()
         flash("Comment posted ", "success")
 
 
@@ -84,11 +78,9 @@ def reply_comment(post_id,comment_id):
     form1 = CommentForm()
     form = ReplyForm()
 
-    comment_path_level_width = 6
-
     post = Post.query.filter_by(id=post_id).first_or_404()
     parent = Comment.query.filter_by(id=comment_id).first_or_404()
-    comments = Comment.query.order_by(Comment.id).all()
+    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.path.asc())
 
 
     if request.method == 'POST' and form.validate_on_submit():
@@ -100,16 +92,10 @@ def reply_comment(post_id,comment_id):
             parent = parent,
             text = text, 
             author = author, 
-            content_item_id = post.id,
-            # add thread timestamp
-            thread_created_on = parent.thread_created_on
+            post_id = post.id,
         )
 
-        db.session.add(comment)
-        db.session.commit()
-        # we got the id, now set zpstring_id
-        comment.zpstring_id = str(comment.id).zfill(comment_path_level_width)
-        db.session.commit()
+        comment.save()
         flash("Reply posted ", "success")
 
     return render_template('article.html',
