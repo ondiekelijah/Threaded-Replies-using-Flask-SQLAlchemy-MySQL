@@ -26,6 +26,12 @@ app =  create_app()
 @app.route("/", methods=("GET", "POST"), strict_slashes=False)
 def index():
 
+    # Uncomment the following line to INSERT a test post
+    # Comment when you are done to avoid duplicate posts
+
+
+    # If you're using this as an API, you'll want to create a new endpoint to handle the POST
+
     # p2 = Post(title='React,Sanity & Flask', body=
     #     """
     #     It would also be possible to avoid the double save if you come up with a different way 
