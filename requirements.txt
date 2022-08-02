@@ -11,6 +11,7 @@ Jinja2==3.0.1
 Mako==1.1.5
 MarkupSafe==2.0.1
 mysql-connector==2.2.9
+python-dotenv==0.20.0
 SQLAlchemy==1.4.25
 Werkzeug==2.0.1
 WTForms==2.3.3
